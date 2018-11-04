@@ -91,6 +91,26 @@ end
    
 end 
 
+<<<<<<< HEAD
+=======
+def play_song 
+  
+  puts "Which song number would you like to play?"
+  
+  user_input = gets.chomp.to_i
+   #Song.all.each.with_index(1) {|item, index| puts "Playing #{item.name} by #{item.artist.name}" if index == user_input }
+  song_list =  Song.all.sort {|x,y| x.name <=> y.name }
+  
+#  song = song_list[user_input+1]
+ # puts "Playing #{song.name} by #{song.artist.name}"
+  
+  if (1..Song.all.length).include?(input)
+      song = list_of_songs[input+2]
+      puts "Playing #{song.name} by #{song.artist.name}"
+    end
+end 
+
+>>>>>>> 92db2da9f4e992e8864c1757266a10e49a851759
 
   def play_song
     puts "Which song number would you like to play?"
